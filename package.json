@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "algolia": "atomic-algolia"
+  },
+  "dependencies": {
+    "atomic-algolia": "^0.3.19",
+    "postcss-cli": "^9.0.1"
+  }
+}
