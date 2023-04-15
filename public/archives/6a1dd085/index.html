@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>04-27::CAP 理论与 BASE 理论 - 芦明宝的博客 | 见自己、见天地、见众生</title><meta name="Description" content="见自己、见天地、见众生"><meta property="og:title" content="04-27::CAP 理论与 BASE 理论" />
+<meta property="og:description" content="CAP 理论与 BASE 理论 什么是CAP理论 1998年，加州大学的计算机科学家 Eric Brewer 提出，分布式系统有三个指标。 Consistency（一致性） Availa" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.lumingba.cn/archives/6a1dd085/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-27T15:58:00+00:00" />
+<meta property="article:modified_time" content="2022-04-27T15:58:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="04-27::CAP 理论与 BASE 理论"/>
+<meta name="twitter:description" content="CAP 理论与 BASE 理论 什么是CAP理论 1998年，加州大学的计算机科学家 Eric Brewer 提出，分布式系统有三个指标。 Consistency（一致性） Availa"/>
+<meta name="application-name" content="芦明宝的博客 | 见自己、见天地、见众生">
+<meta name="apple-mobile-web-app-title" content="芦明宝的博客 | 见自己、见天地、见众生"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://blog.lumingba.cn/archives/6a1dd085/" /><link rel="prev" href="https://blog.lumingba.cn/archives/a010ac2d/" /><link rel="next" href="https://blog.lumingba.cn/archives/mv2jaib0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "04-27::CAP 理论与 BASE 理论",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.lumingba.cn\/archives\/6a1dd085\/"
+        },"genre": "posts","keywords": "技巧","wordcount":  1135 ,
+        "url": "https:\/\/blog.lumingba.cn\/archives\/6a1dd085\/","datePublished": "2022-04-27T15:58:00+00:00","dateModified": "2022-04-27T15:58:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "芦明宝"},"author": {
+                "@type": "Person",
+                "name": "芦明宝"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="芦明宝的博客 | 见自己、见天地、见众生"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa fa-home'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa fa-list'></i> 文章 </a><a class="menu-item" href="/tags/"><i class='fa fa-tags'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fa fa-adjust'></i> 分类 </a><a class="menu-item" href="/friend/"><i class='fa fa-link'></i> 友链 </a><a class="menu-item" href="/about/"><i class='fa fa-info-circle'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="芦明宝的博客 | 见自己、见天地、见众生"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa fa-home'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa fa-list'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fa fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fa fa-adjust'></i>分类</a><a class="menu-item" href="/friend/" title=""><i class='fa fa-link'></i>友链</a><a class="menu-item" href="/about/" title=""><i class='fa fa-info-circle'></i>关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">04-27::CAP 理论与 BASE 理论</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>芦明宝</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>日常记录</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-27">2022-04-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1135 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
+                <i class="far fa-eye fa-fw"></i>&nbsp;本文总阅读量<span id="busuanzi_value_page_pv"></span>次&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#什么是cap理论">什么是CAP理论</a></li>
+    <li><a href="#什么是-base-理论">什么是 BASE 理论</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="cap-理论与-base-理论">CAP 理论与 BASE 理论</h1>
+<h2 id="什么是cap理论">什么是CAP理论</h2>
+<blockquote>
+<p>1998年，加州大学的计算机科学家 Eric Brewer 提出，分布式系统有三个指标。</p>
+</blockquote>
+<ul>
+<li>Consistency（一致性）</li>
+<li>Availability（可用性）</li>
+<li>Partition tolerance（分区容错性）</li>
+</ul>
+<blockquote>
+<p>Eric Brewer 说：这三个指标不可能同时满足，这个结论就叫做 CAP 定理。</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://oss.lumingbao.cn/images/20220427/9fee53cc15634ddab1b8752f2fbe7136.png?imageView2/0/interlace/1/q/50%7cimageslim"
+        data-srcset="https://oss.lumingbao.cn/images/20220427/9fee53cc15634ddab1b8752f2fbe7136.png?imageView2/0/interlace/1/q/50%7cimageslim, https://oss.lumingbao.cn/images/20220427/9fee53cc15634ddab1b8752f2fbe7136.png?imageView2/0/interlace/1/q/50%7cimageslim 1.5x, https://oss.lumingbao.cn/images/20220427/9fee53cc15634ddab1b8752f2fbe7136.png?imageView2/0/interlace/1/q/50%7cimageslim 2x"
+        data-sizes="auto"
+        alt="https://oss.lumingbao.cn/images/20220427/9fee53cc15634ddab1b8752f2fbe7136.png?imageView2/0/interlace/1/q/50|imageslim"
+        title="https://oss.lumingbao.cn/images/20220427/9fee53cc15634ddab1b8752f2fbe7136.png?imageView2/0/interlace/1/q/50|imageslim" style="border-radius:10px 10px 0 0;"/></p>
+<ul>
+<li>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->分区容错性（Partition tolerance）<!-- raw HTML omitted --><!-- raw HTML omitted --> ：比如，一台服务器放在中国，另一台服务器放在美国，这就是两个区，它们之间可能无法通信。介于分区状态下，G1 和 G2 是两台跨区的服务器，G1 向 G2 发送一条消息，G2 可能无法收到，因为网络总是不可靠的，因此可以认为P总是成立的。</p>
+</li>
+<li>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->Availability（可用性） <!-- raw HTML omitted --><!-- raw HTML omitted -->：只要收到用户的请求，服务器就必须给出回应，但此时由于网络问题会导致服务器之间的数据无法做到实时同步，牺牲了一致性，此时满足AP。</p>
+</li>
+<li>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->Consistency（一致性） <!-- raw HTML omitted --><!-- raw HTML omitted -->：用户A访问系统A，用户B访问系统B，系统A和系统B保持同步，当用户A对系统A的data做出更改后，用户B查询系统B的data时，需要查询出用户A操作后的数据，而同步是要通过网络，网络却又总是不可靠的，所以为确保用户B能查询出用户A修改的数据，必须在用户B查询前将系统A的data同步到系统B上，这样就牺牲了可用性，此时满足CP。</p>
+</li>
+</ul>
+<h2 id="什么是-base-理论">什么是 BASE 理论</h2>
+<blockquote>
+<p>由于CAP中一致性C和可用性A无法兼得，eBay的架构师，提出了BASE理论，它是通过牺牲数据的强一致性，来获得可用性。它有如下3种特征：</p>
+</blockquote>
+<ul>
+<li><!-- raw HTML omitted --><!-- raw HTML omitted -->Basically Available（基本可用）<!-- raw HTML omitted --><!-- raw HTML omitted -->：分布式系统在出现不可预知故障的时候，允许损失部分可用性，保证核心功能的可用。</li>
+<li><!-- raw HTML omitted --><!-- raw HTML omitted -->Soft State（软状态）<!-- raw HTML omitted --><!-- raw HTML omitted -->：软状态也称为弱状态，和硬状态相对，是指允许系统中的数据存在中间状态，并认为该中间状态的存在不会影响系统的整体可用性，即允许系统在不同节点的数据副本之间进行数据同步的过程存在延时。</li>
+<li><!-- raw HTML omitted --><!-- raw HTML omitted -->Eventually consistent（最终一致性）<!-- raw HTML omitted --><!-- raw HTML omitted -->：最终一致性强调的是系统中所有的数据副本，在经过一段时间的同步后，最终能够达到一个一致的状态。因此，最终一致性的本质是需要系统保证最终数据能够达到一致，而不需要实时保证系统数据的强一致性。</li>
+</ul>
+<blockquote>
+<p>BASE理论并没有要求数据的强一致性，而是允许数据在一定的时间段内是不一致的，但在最终某个状态会达到一致。在生产环境中，很多公司，会采用BASE理论来实现数据的一致，因为产品的可用性相比强一致性来说，更加重要。比如在电商平台中，当用户对一个订单发起支付时，往往会调用第三方支付平台，比如支付宝支付或者微信支付，调用第三方成功后，第三方并不能及时通知我方系统，在第三方没有通知我方系统的这段时间内，我们给用户的订单状态显示支付中，等到第三方回调之后，我们再将状态改成已支付。虽然订单状态在短期内存在不一致，但是用户却获得了更好的产品体验。</p>
+</blockquote>
+<p>END</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-04-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/archives/a010ac2d/" class="prev" rel="prev" title="04-20::Docker搭建Ngrok内网穿透"><i class="fas fa-angle-left fa-fw"></i>04-20::Docker搭建Ngrok内网穿透</a>
+            <a href="/archives/mv2jaib0/" class="next" rel="next" title="09-02::Docker部署Zabbix">09-02::Docker部署Zabbix<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments">
+    <h2><i class="fas fa-comment-alt"></i> 评论</h2>
+    <div id="vcomments"></div>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+    <script type="text/javascript">
+        new Valine({
+            el: '#vcomments',
+            appId: 'IBw7doFbwKd69LN7IK6SgUuK-gzGzoHsz',
+            appKey: 'sqQp3OlLFNT2sUGXUIXWdcnQ',
+            notify: false,
+            verify: false,
+            avatar: 'mp',
+            placeholder: '说点什么吧...',
+            visitor: false
+        });
+    </script>
+</div><script src="//cdn.jsdelivr.net/npm/viewerjs@1.10.1/dist/viewer.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/npm/viewerjs@1.10.1/dist/viewer.min.css"/>
+        <script>
+            new Viewer(document.getElementById('content'), {
+                title: '',
+                navbar: 0,
+                toolbar: {
+                    zoomIn: 4,
+                    zoomOut: 4,
+                    oneToOne: 4,
+                    reset: 0,
+                    prev: 0,
+                    play: {
+                        show: 4,
+                        size: 'large',
+                    },
+                    next: 0,
+                    rotateLeft: 0,
+                    rotateRight: 0,
+                    flipHorizontal: 0,
+                    flipVertical: 0,
+                },
+                
+                
+                
+                filter(image) {
+                    return image.complete;
+                },
+            });
+        </script>
+    </article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license">lumingbao</span><span class="icp-splitter"></span><br class="icp-br"/></br>
+                    <span class="icp">陇ICP备2021002622号-1</span></div>
+
+            <div>
+                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-eye"></i> 本站访问量：<span id="busuanzi_value_site_pv"></span>次
+                </span>
+                &nbsp;
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-user"></i> 您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者
+                </span>
+            <div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"data":{"id-1":"芦明宝的博客","id-2":"芦明宝的博客"},"search":{"algoliaAppID":"JQTRDUJFL3","algoliaIndex":"blog.lumingbao.cn","algoliaSearchKey":"0ac93a0f3c65a7ec95ab3858c4277679","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

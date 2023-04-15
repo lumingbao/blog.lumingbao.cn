@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>SpringBoot 集成ElasticSearch - 芦明宝的博客 | 见自己、见天地、见众生</title><meta name="Description" content="见自己、见天地、见众生"><meta property="og:title" content="SpringBoot 集成ElasticSearch" />
+<meta property="og:description" content="SpringBoot 集成ElasticSearch 一：安装ElasticSearch ElasticSearch简介：分布式索引。 ElasticSearch与M" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.lumingba.cn/archives/47730/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-01-28T19:42:00+00:00" />
+<meta property="article:modified_time" content="2020-01-28T19:42:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SpringBoot 集成ElasticSearch"/>
+<meta name="twitter:description" content="SpringBoot 集成ElasticSearch 一：安装ElasticSearch ElasticSearch简介：分布式索引。 ElasticSearch与M"/>
+<meta name="application-name" content="芦明宝的博客 | 见自己、见天地、见众生">
+<meta name="apple-mobile-web-app-title" content="芦明宝的博客 | 见自己、见天地、见众生"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://blog.lumingba.cn/archives/47730/" /><link rel="prev" href="https://blog.lumingba.cn/archives/33551/" /><link rel="next" href="https://blog.lumingba.cn/archives/93072/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SpringBoot 集成ElasticSearch",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.lumingba.cn\/archives\/47730\/"
+        },"genre": "posts","keywords": "SpringBoot, ElasticSearch","wordcount":  2179 ,
+        "url": "https:\/\/blog.lumingba.cn\/archives\/47730\/","datePublished": "2020-01-28T19:42:00+00:00","dateModified": "2020-01-28T19:42:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "芦明宝"},"author": {
+                "@type": "Person",
+                "name": "芦明宝"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="芦明宝的博客 | 见自己、见天地、见众生"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa fa-home'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa fa-list'></i> 文章 </a><a class="menu-item" href="/tags/"><i class='fa fa-tags'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fa fa-adjust'></i> 分类 </a><a class="menu-item" href="/friend/"><i class='fa fa-link'></i> 友链 </a><a class="menu-item" href="/about/"><i class='fa fa-info-circle'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="芦明宝的博客 | 见自己、见天地、见众生"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa fa-home'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa fa-list'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fa fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fa fa-adjust'></i>分类</a><a class="menu-item" href="/friend/" title=""><i class='fa fa-link'></i>友链</a><a class="menu-item" href="/about/" title=""><i class='fa fa-info-circle'></i>关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">SpringBoot 集成ElasticSearch</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>芦明宝</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot/"><i class="far fa-folder fa-fw"></i>SpringBoot</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-28">2020-01-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2179 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;
+                <i class="far fa-eye fa-fw"></i>&nbsp;本文总阅读量<span id="busuanzi_value_page_pv"></span>次&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#springboot-集成elasticsearch">SpringBoot 集成ElasticSearch</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="springboot-集成elasticsearch">SpringBoot 集成ElasticSearch</h2>
+<h6 id="一安装elasticsearch">一：安装ElasticSearch</h6>
+<blockquote>
+<p>ElasticSearch简介：分布式索引。</p>
+</blockquote>
+<blockquote>
+<p>ElasticSearch与MySql 关系：<br>
+DB type –&gt; Table
+Document –&gt; row</p>
+</blockquote>
+<p>ElasticSearch已有5.x版本，然而Spring Data 目前只支持ElasticSearch2.X版本，支持说明：https://github.com/spring-projects/spring-data-elasticsearch/wiki/Spring-Data-Elasticsearch&mdash;Spring-Boot&mdash;version-matrix</p>
+<p>手动安装Elasticsearch</p>
+<p>Linux下无法用root用户启动 ElasticSearch，创建 elasticsearch用户，命令如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@slave2 ~<span class="o">]</span> useradd es 
+<span class="o">[</span>root@slave2 ~<span class="o">]</span> passwd es
+</code></pre></div><p>获取ElasticSearch，地址：https://www.elastic.co/downloads/past-releases</p>
+<p>安装ElasticSearch：
+解压，修改config下的elasticsearch.yml</p>
+<p>配置 :<br>
+cluster.name: elasticsearch #这是集群名字，我们起名为 elasticsearch。es启动后会将具有相同集群名字的节点放到一个集群下。<br>
+node.name: node-1<br>
+network.host: 192.168.20.110<br>
+discovery.zen.minimum_master_nodes: 1</p>
+<p>修改用户权限，使用root用户执行如下命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">chown -R 用户名 elasticsearch-2.4.0
+</code></pre></div><p>运行：<br>
+进入 bin 目录，执行 ./elasticsearch</p>
+<p>没有报错启动成功，访问 IP:9200，提示json信息，表示运行成功。</p>
+<p>自动安装Elasticsearch</p>
+<p>1．下载 elasticsearch rpm 安装包，上传至linux 相应目录下，执行安装命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">yum install elasticsearch.rmp
+</code></pre></div><p>2.安装完毕以后查看安装目录，命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">rpm -ql elasticsearch
+</code></pre></div><p>3.修改配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vi /etc/sysconfig/elasticsearch
+</code></pre></div><p>加入 JAVA_HOME=” /usr/java/jdk1.8.0_131”<br>
+指定jdk目录,因为service 脚本无法读取 JAVA_HOME环境变量</p>
+<p>4.执行启动命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">service elasticsearch start
+</code></pre></div><p>查看启动状态：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">service elasticsearch status
+</code></pre></div><p>5.设置开机启动，命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">chkconfig elasticsearch on
+</code></pre></div><p>6.修改配置文件，使外部可以访问：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vi /etc/elasticsearch/elasticsearch.yml
+</code></pre></div><h6 id="二服务化elasticsearch">二：服务化Elasticsearch</h6>
+<p>完成了上述步骤以后，直接可以使用脚本启动服务.但是使用起来不是很方便.比如我们的日志是直接打印到了控制台上了.退出后 ElasticSearch 直接就退出了.不太好使.因此需要进行一些处理.</p>
+<p>ElasticSearch 守护进程 java-service-wrapper 在 2.x 使用的解决方法。<br>
+elasticsearch-1.x 版本直接使用：https://github.com/elastic/ela &hellip; apper 则没什么问题，按照向导启动即可，最近在弄elasticsearch-2.0 时，直接把 1.x 下的守护程序 copy 过来后，启动出现问题。其中几个变化有：</p>
+<ol>
+<li>es 不再使用 sigar 来进行监控系统资源了(这里对守护程序无影响)。</li>
+<li>elasticsearch 的启动类从 org.elasticsearch.bootstrap.ElasticsearchF 变更到 org.elasticsearch.bootstrap.Elasticsearch，并且在后续版本删除了 ElasticsearchF 类。</li>
+<li>为了安全，不再建议使用 root  权限来运行 es。</li>
+</ol>
+<p>这里我目前的解决方案是依然使用 root 权限来启动，非 root 用户下启动暂未验证。方法如下：</p>
+<ol>
+<li>既然 sigar 没了，先注释掉 sigar。</li>
+<li>改变启动类为:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">wrapper.app.parameter.1=org.elasticsearch.bootstrap.Elasticsearch
+wrapper.app.parameter.2=start
+</code></pre></div><ol start="3">
+<li>允许 root 用户运行，并禁止掉类权限验证：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">wrapper.java.additional.1=-Des.insecure.allow.root=true
+wrapper.java.additional.2=-Des.security.manager.enabled=false
+</code></pre></div><p>注：希望有非 root  用户下运行该守护程序的解决方案的同学提供下解决方法，在此不胜感激。
+此方法降低了安全性，大家慎重考虑。
+不喜欢折腾的同学直接使用 rpm 安装即可。</p>
+<p>服务化 ElasticSearch 是使用的是一个 开源的 ServiceWrapper 脚本完成了.这个脚本的 ElasticSearch 的官方开发人员提供的.</p>
+<p>下载插件</p>
+<p>GitHub 地址: <a href="https://github.com/elastic/elasticsearch-servicewrapper" target="_blank" rel="noopener noreffer">https://github.com/elastic/elasticsearch-servicewrapper</a></p>
+<p>下载zip文件，解压到指定目录，命令：unzip service.zip</p>
+<p>执行拷贝命令将service目录拷贝到 elasticsearch 安装目录下bin目录下的service</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">cp -r  ~/master/elasticsearch-servicewrapper-master/service/ /home/q/elasticsearch172/bin/service
+</code></pre></div><p>修改elasticsearch.conf 设置 ES_HOME:/sur/elasticsearch/elasticsearch-2.4.5/</p>
+<p>安装服务，进入service目录执行：</p>
+<p>给 elasticsearch 文件给执行权限命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">chmod a+x elasticsearch
+</code></pre></div><p>执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">elasticsearch install
+</code></pre></div><p>启动服务：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">service elasticsearch start
+</code></pre></div><p>chmod命令详解：<br>
+chmod [ugoa] [+(加入)-(除去)=(设定)] [rwx] 文件或目录<br>
+u 表示“用户（user）”，即文件或目录的所有者。<br>
+g 表示“同组（group）用户”，即与文件属主有相同组ID的所有用户。<br>
+o 表示“其他（others）用户”。<br>
+a 表示“所有（all）用户”。它是系统默认值。</p>
+<p>r 可读。<br>
+w 可写。<br>
+x 可执行。</p>
+<h6 id="三插件及其安装">三：插件及其安装</h6>
+<p>BigDesk Plugin : 对集群中es状态进行监控。<br>
+Elasticsearch Head Plugin: 对ES进行各种操作，如查询、删除、浏览索引等。</p>
+<p>1.安装head插件</p>
+<ol>
+<li><a href="https://github.com/mobz/elasticsearch-head" target="_blank" rel="noopener noreffer">https://github.com/mobz/elasticsearch-head</a>下载zip 解压</li>
+<li>建立elasticsearch-2.4.0\plugins\head文件</li>
+<li>将解压后的elasticsearch-head-master文件夹下的文件copy到head</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">cp -r elasticsearch-head-master/* /usr/share/elasticsearch/plugins/head
+</code></pre></div><ol start="4">
+<li>运行es<br>
+访问：http://ip:9200/_plugin/head/</li>
+</ol>
+<p>2.安装bigdesk</p>
+<ol>
+<li>下载bigdesk插件包 <a href="https://github.com/lukas-vlcek/bigdesk" target="_blank" rel="noopener noreffer">https://github.com/lukas-vlcek/bigdesk</a> 下载master.zip后解压</li>
+<li>建立elasticsearch-2.x\plugins\bigdesk_site文件夹</li>
+<li>将解压后的bigdesk-master文件夹下的文件copy到_site</li>
+<li>在plugin\bigdesk下创建 plugin-descriptor.properties</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim plugin-descriptor.properties
+</code></pre></div><p>添加以下内容:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">description</span><span class="o">=</span>bigdesk - A web front end <span class="k">for</span> an elastic search cluster
+<span class="nv">version</span><span class="o">=</span>master
+<span class="nv">site</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">name</span><span class="o">=</span>bigdesk
+</code></pre></div><ol start="5">
+<li>vim _site/js/store/BigdeskStore.js  定位到142行<br>
+去掉major == 1条件</li>
+<li>重启es，访问http://ip:9200/_plugin/bigdesk/</li>
+</ol>
+<h6 id="四springboot集成es">四：Springboot集成ES</h6>
+<p>pom.xml 引用相关依赖：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-data-elasticsearch<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework.data<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-data-elasticsearch<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>2.1.4.RELEASE<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div><p>在application.properties配置elasticsearch 相关信息</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">spring.data.elasticsearch.cluster-name=elasticsearch
+spring.data.elasticsearch.cluster-nodes=192.168.20.102:9300
+spring.data.elasticsearch.local=false
+spring.data.elasticsearch.repositories.enabled=true
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-01-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/springboot/">SpringBoot</a>,&nbsp;<a href="/tags/elasticsearch/">ElasticSearch</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/archives/33551/" class="prev" rel="prev" title="Mac下制作Win10启动盘"><i class="fas fa-angle-left fa-fw"></i>Mac下制作Win10启动盘</a>
+            <a href="/archives/93072/" class="next" rel="next" title="CentOS安装JDK">CentOS安装JDK<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments">
+    <h2><i class="fas fa-comment-alt"></i> 评论</h2>
+    <div id="vcomments"></div>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+    <script type="text/javascript">
+        new Valine({
+            el: '#vcomments',
+            appId: 'IBw7doFbwKd69LN7IK6SgUuK-gzGzoHsz',
+            appKey: 'sqQp3OlLFNT2sUGXUIXWdcnQ',
+            notify: false,
+            verify: false,
+            avatar: 'mp',
+            placeholder: '说点什么吧...',
+            visitor: false
+        });
+    </script>
+</div><script src="//cdn.jsdelivr.net/npm/viewerjs@1.10.1/dist/viewer.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/npm/viewerjs@1.10.1/dist/viewer.min.css"/>
+        <script>
+            new Viewer(document.getElementById('content'), {
+                title: '',
+                navbar: 0,
+                toolbar: {
+                    zoomIn: 4,
+                    zoomOut: 4,
+                    oneToOne: 4,
+                    reset: 0,
+                    prev: 0,
+                    play: {
+                        show: 4,
+                        size: 'large',
+                    },
+                    next: 0,
+                    rotateLeft: 0,
+                    rotateRight: 0,
+                    flipHorizontal: 0,
+                    flipVertical: 0,
+                },
+                
+                
+                
+                filter(image) {
+                    return image.complete;
+                },
+            });
+        </script>
+    </article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license">lumingbao</span><span class="icp-splitter"></span><br class="icp-br"/></br>
+                    <span class="icp">陇ICP备2021002622号-1</span></div>
+
+            <div>
+                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-eye"></i> 本站访问量：<span id="busuanzi_value_site_pv"></span>次
+                </span>
+                &nbsp;
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-user"></i> 您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者
+                </span>
+            <div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"data":{"id-1":"芦明宝的博客","id-2":"芦明宝的博客"},"search":{"algoliaAppID":"JQTRDUJFL3","algoliaIndex":"blog.lumingbao.cn","algoliaSearchKey":"0ac93a0f3c65a7ec95ab3858c4277679","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

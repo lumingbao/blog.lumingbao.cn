@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>MySQL - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</title>
+        <link>https://blog.lumingba.cn/tags/mysql/</link>
+        <description>MySQL - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Mar 2021 08:19:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/tags/mysql/" rel="self" type="application/rss+xml" /><item>
+    <title>mysqldump 导出 数据&#43;结构&#43;函数&#43;存储过程</title>
+    <link>https://blog.lumingba.cn/archives/52346/</link>
+    <pubDate>Wed, 24 Mar 2021 08:19:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/52346/</guid>
+    <description><![CDATA[mysqldump 导出 数据+结构+函数+存储过程 MySQL导出： 导出单个数据库：结构 无数据 [root@localhost ~]#mysqldump -h127.0.0.1 -uroot -p --opt --no-data db_name &gt;~/db_name.sql 导出单个数据库：有数据 无结构 [root@localhost ~]#mysqldump -h127.0.0.1 -uroot -p --opt --no-create-info db_name &gt;~/db_name.sql 导]]></description>
+</item><item>
+    <title>Linux下Mysql每天自动备份的实现</title>
+    <link>https://blog.lumingba.cn/archives/75275/</link>
+    <pubDate>Tue, 05 Jan 2021 09:51:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/75275/</guid>
+    <description><![CDATA[MacOS Linux下Mysql每天自动备份的实现 新建目录 mkdir -p /data/mysqlbak/data mkdir -p /data/mysqlbak/scripts mkdir -p /data/mysqlbak/logs 创建备份脚本 cd /data/mysqlbak/scripts vi backup.sh #!/bin/bash #备份目录 BACKUP_ROOT=/data/mysqlbak BACKUP_FILEDIR=$BACKUP_ROOT/data #当前日期 DATE=$(date +%Y%m%d) ######备份###]]></description>
+</item></channel>
+</rss>
