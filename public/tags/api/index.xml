@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>API - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</title>
+        <link>https://blog.lumingba.cn/tags/api/</link>
+        <description>API - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 16 Dec 2021 22:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/tags/api/" rel="self" type="application/rss+xml" /><item>
+    <title>根据银行卡号查询银行卡信息API</title>
+    <link>https://blog.lumingba.cn/archives/97661/</link>
+    <pubDate>Thu, 16 Dec 2021 22:00:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/97661/</guid>
+    <description><![CDATA[根据银行卡号查询开户行API 该接口由支付宝提供，完全免费 使用该接口可以校验银行卡号并返回银行卡号所属银行等信息 String cardNo = &ldquo;xxxxx&rdquo;; https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=cardNo&cardBinCheck=true { &#34;cardType&#34;: &#34;DC&#34;, &#34;bank&#34;: &#34;QDCCB&#34;, // 青岛银行]]></description>
+</item></channel>
+</rss>

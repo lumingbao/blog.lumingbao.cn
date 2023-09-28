@@ -1,0 +1,79 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>芦明宝的博客 | 见自己、见天地、见众生</title>
+        <link>https://blog.lumingba.cn/</link>
+        <description>见自己、见天地、见众生</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 28 Sep 2023 14:40:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://blog.lumingba.cn/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Mac环境下安装Node.js多版本管理工具NVM</title>
+    <link>https://blog.lumingba.cn/archives/nmcs5jwv/</link>
+    <pubDate>Thu, 28 Sep 2023 14:40:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/nmcs5jwv/</guid>
+    <description><![CDATA[Mac环境下安装Node.js多版本管理工具NVM 一：安装 日常开发过程中，手动进行Node.js的多版本管理非常不便。这里推荐使用nvm。对]]></description>
+</item><item>
+    <title>09-02::Docker部署OpenVPN</title>
+    <link>https://blog.lumingba.cn/archives/l0bfx4kv/</link>
+    <pubDate>Fri, 02 Sep 2022 16:58:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/l0bfx4kv/</guid>
+    <description><![CDATA[Docker部署OpenVPN 拉取镜像、创建目录 docker pull kylemanna/openvpn:2.4 mkdir -p /data/openvpn 1、使用openvpn生成配置文件，注意目录映射和IP地址换成自己的 docker run \ -v /data/openvpn:/etc/openvpn \]]></description>
+</item><item>
+    <title>09-02::Docker部署Zabbix</title>
+    <link>https://blog.lumingba.cn/archives/mv2jaib0/</link>
+    <pubDate>Fri, 02 Sep 2022 15:58:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/mv2jaib0/</guid>
+    <description><![CDATA[Docker部署Zabbix 一：安装 Zabbix 服务 创建docker网络 docker network create -d bridge zabbix_net 创建zabbix服务，注意数据库配置改为自己的数据库信息，启动时会]]></description>
+</item><item>
+    <title>04-27::CAP 理论与 BASE 理论</title>
+    <link>https://blog.lumingba.cn/archives/6a1dd085/</link>
+    <pubDate>Wed, 27 Apr 2022 15:58:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/6a1dd085/</guid>
+    <description><![CDATA[CAP 理论与 BASE 理论 什么是CAP理论 1998年，加州大学的计算机科学家 Eric Brewer 提出，分布式系统有三个指标。 Consistency（一致性） Availa]]></description>
+</item><item>
+    <title>04-20::Docker搭建Ngrok内网穿透</title>
+    <link>https://blog.lumingba.cn/archives/a010ac2d/</link>
+    <pubDate>Wed, 20 Apr 2022 17:00:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/a010ac2d/</guid>
+    <description><![CDATA[Docker搭建Ngrok内网穿透 一：准备 要有云服务器一台; 公网域名一个，可以是一级域名也可以是二级域名，我这里使用二级域名ngrok.my]]></description>
+</item><item>
+    <title>CAS 5.3服务器搭建</title>
+    <link>https://blog.lumingba.cn/archives/78134/</link>
+    <pubDate>Thu, 17 Mar 2022 14:00:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/78134/</guid>
+    <description><![CDATA[CAS 5.3服务器搭建 一：CAS5.3 下载 下载地址： GitHub下载地址：https://github.com/apereo/cas-overl]]></description>
+</item><item>
+    <title>MacOS下制作种子图片、将种子隐藏至图片内</title>
+    <link>https://blog.lumingba.cn/archives/35543/</link>
+    <pubDate>Mon, 10 Jan 2022 13:00:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/35543/</guid>
+    <description><![CDATA[MacOS下制作种子图片、将种子隐藏至图片内 开始动手~ 准备： 环境: Mac os 10.13.5 、工具:iTerm2 、 命令:zip和unzip 第一步 压缩t.mp4文]]></description>
+</item><item>
+    <title>根据银行卡号查询银行卡信息API</title>
+    <link>https://blog.lumingba.cn/archives/97661/</link>
+    <pubDate>Thu, 16 Dec 2021 22:00:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/97661/</guid>
+    <description><![CDATA[根据银行卡号查询开户行API 该接口由支付宝提供，完全免费 使用该接口可以校验银行卡号并返回银行卡号所属银行等信息 String cardNo = &ldquo;xxxxx&rdquo;; https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=cardNo&cardBinCheck=true { &#34;cardType&#34;: &#34;DC&#34;, &#34;bank&#34;: &#34;QDCCB&#34;, // 青岛银行]]></description>
+</item><item>
+    <title>激活Windows11</title>
+    <link>https://blog.lumingba.cn/archives/26183/</link>
+    <pubDate>Fri, 26 Nov 2021 14:00:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/26183/</guid>
+    <description><![CDATA[激活windows11 1、在桌面新建一个文本文档，把以下代码复制进去: slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX slmgr /skms kms.03k.org slmgr /ato。 如图所示： 2、点击文件选择“另存为”，在弹出的]]></description>
+</item><item>
+    <title>使用rsa对密码加密传输(js前端加密，java后台解密)</title>
+    <link>https://blog.lumingba.cn/archives/16805/</link>
+    <pubDate>Mon, 22 Nov 2021 09:12:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/16805/</guid>
+    <description><![CDATA[使用rsa对密码加密传输(js前端加密，java后台解密) 生成密钥 package cn.lumingbao; import org.bouncycastle.jce.provider.BouncyCastleProvider; import java.security.KeyPair; import java.security.KeyPairGenerator; import java.security.Provider; import java.security.SecureRandom; /** * ============================ * * @ClassName Test * @Description * @Author lumingbao * @Date 2021/11/17 15:56 * ============================ */ public class Test { public static]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Extjs - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</title>
+        <link>https://blog.lumingba.cn/tags/extjs/</link>
+        <description>Extjs - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 30 Oct 2015 11:41:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/tags/extjs/" rel="self" type="application/rss+xml" /><item>
+    <title>Extjs 添加拦截器，对后台异常做统一的前台处理</title>
+    <link>https://blog.lumingba.cn/archives/14181/</link>
+    <pubDate>Fri, 30 Oct 2015 11:41:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/14181/</guid>
+    <description><![CDATA[1.创建拦截器基类 /** * 抽象类 * 任何要实现拦截器都需要继承自这个类，并实现其中的interceptor方法，并添加至拦截器池中，就可以实现拦截]]></description>
+</item></channel>
+</rss>

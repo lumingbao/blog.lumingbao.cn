@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>MacOS - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</title>
+        <link>https://blog.lumingba.cn/tags/macos/</link>
+        <description>MacOS - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 18 Sep 2021 10:32:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/tags/macos/" rel="self" type="application/rss+xml" /><item>
+    <title>MacOS 移动硬盘中的文件灰色不可用处理办法</title>
+    <link>https://blog.lumingba.cn/archives/57323/</link>
+    <pubDate>Sat, 18 Sep 2021 10:32:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/57323/</guid>
+    <description><![CDATA[MacOS 移动硬盘中的文件灰色不可用处理办法 有时候在苹果电脑上插入移动硬盘，会发现有些文件灰色状态不可用，也不能进行复制，可以用这个办法进行暂时解决]]></description>
+</item></channel>
+</rss>
