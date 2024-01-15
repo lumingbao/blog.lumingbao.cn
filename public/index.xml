@@ -3,9 +3,16 @@
         <title>芦明宝的博客 | 见自己、见天地、见众生</title>
         <link>https://blog.lumingba.cn/</link>
         <description>见自己、见天地、见众生</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 28 Sep 2023 14:40:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 15 Jan 2024 10:13:00 &#43;0000</lastBuildDate>
             <atom:link href="https://blog.lumingba.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>zoc license code</title>
+    <link>https://blog.lumingba.cn/archives/zblbvrl6/</link>
+    <pubDate>Mon, 15 Jan 2024 10:13:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/zblbvrl6/</guid>
+    <description><![CDATA[zoc license code 一：点击导航栏上的zoc-about zoc，然后： 二：点击enter license: # 注册码 Part A: 51698/01027/34713 Part B: 00937 Part A: 50866/01027/47775 Part B: 57341 Part A: 53866/01028/18861 Part B: 45757 Part A: 03754/01029/23239 Part B: 50179 Part A: 55834/01027/59600 Part]]></description>
+</item><item>
     <title>Mac环境下安装Node.js多版本管理工具NVM</title>
     <link>https://blog.lumingba.cn/archives/nmcs5jwv/</link>
     <pubDate>Thu, 28 Sep 2023 14:40:00 &#43;0000</pubDate>
@@ -68,12 +75,5 @@
     <author>芦明宝</author>
     <guid>https://blog.lumingba.cn/archives/26183/</guid>
     <description><![CDATA[激活windows11 1、在桌面新建一个文本文档，把以下代码复制进去: slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX slmgr /skms kms.03k.org slmgr /ato。 如图所示： 2、点击文件选择“另存为”，在弹出的]]></description>
-</item><item>
-    <title>使用rsa对密码加密传输(js前端加密，java后台解密)</title>
-    <link>https://blog.lumingba.cn/archives/16805/</link>
-    <pubDate>Mon, 22 Nov 2021 09:12:00 &#43;0000</pubDate>
-    <author>芦明宝</author>
-    <guid>https://blog.lumingba.cn/archives/16805/</guid>
-    <description><![CDATA[使用rsa对密码加密传输(js前端加密，java后台解密) 生成密钥 package cn.lumingbao; import org.bouncycastle.jce.provider.BouncyCastleProvider; import java.security.KeyPair; import java.security.KeyPairGenerator; import java.security.Provider; import java.security.SecureRandom; /** * ============================ * * @ClassName Test * @Description * @Author lumingbao * @Date 2021/11/17 15:56 * ============================ */ public class Test { public static]]></description>
 </item></channel>
 </rss>
