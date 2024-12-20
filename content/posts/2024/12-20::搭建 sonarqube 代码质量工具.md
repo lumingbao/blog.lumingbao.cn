@@ -24,6 +24,14 @@ docker pull sonarqube
 
 ````shell
 docker run -d --name sonarqube -p 9000:9000 sonarqube
+
+生产环境推荐使用外置数据库
+docker run -d --name sonarqube \
+  -e SONARQUBE_JDBC_URL=jdbc:mysql://<host_ip>:3306/sonar?useUnicode=true\&characterEncoding=utf8\&useSSL=false \
+  -e SONARQUBE_JDBC_USERNAME=sonar \
+  -e SONARQUBE_JDBC_PASSWORD=sonarpassword \
+  -p 9000:9000 \
+  sonarqube
 ````
 
 ### 1.3：访问 SonarQube
