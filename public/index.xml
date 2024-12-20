@@ -3,9 +3,16 @@
         <title>芦明宝的博客 | 见自己、见天地、见众生</title>
         <link>https://blog.lumingba.cn/</link>
         <description>见自己、见天地、见众生</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 15 Jan 2024 10:13:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Dec 2024 08:50:00 &#43;0000</lastBuildDate>
             <atom:link href="https://blog.lumingba.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>搭建 sonarqube 代码质量工具</title>
+    <link>https://blog.lumingba.cn/archives/4y70teum/</link>
+    <pubDate>Fri, 20 Dec 2024 08:50:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/4y70teum/</guid>
+    <description><![CDATA[搭建 sonarqube 代码质量工具 SonarQube是管理代码质量一个开放平台，可以快速的定位代码中潜在的或者明显的错误，下面将会介绍一下这个工具的安装、配]]></description>
+</item><item>
     <title>zoc license code</title>
     <link>https://blog.lumingba.cn/archives/zblbvrl6/</link>
     <pubDate>Mon, 15 Jan 2024 10:13:00 &#43;0000</pubDate>
@@ -68,12 +75,5 @@
     <author>芦明宝</author>
     <guid>https://blog.lumingba.cn/archives/97661/</guid>
     <description><![CDATA[根据银行卡号查询开户行API 该接口由支付宝提供，完全免费 使用该接口可以校验银行卡号并返回银行卡号所属银行等信息 String cardNo = &ldquo;xxxxx&rdquo;; https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=cardNo&cardBinCheck=true { &#34;cardType&#34;: &#34;DC&#34;, &#34;bank&#34;: &#34;QDCCB&#34;, // 青岛银行]]></description>
-</item><item>
-    <title>激活Windows11</title>
-    <link>https://blog.lumingba.cn/archives/26183/</link>
-    <pubDate>Fri, 26 Nov 2021 14:00:00 &#43;0000</pubDate>
-    <author>芦明宝</author>
-    <guid>https://blog.lumingba.cn/archives/26183/</guid>
-    <description><![CDATA[激活windows11 1、在桌面新建一个文本文档，把以下代码复制进去: slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX slmgr /skms kms.03k.org slmgr /ato。 如图所示： 2、点击文件选择“另存为”，在弹出的]]></description>
 </item></channel>
 </rss>
