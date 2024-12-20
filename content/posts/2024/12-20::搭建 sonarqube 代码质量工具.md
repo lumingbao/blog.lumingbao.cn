@@ -44,8 +44,7 @@ docker run -d --name sonarqube \
 ## 二：sonarqube基本配置
 ### 2.1：汉化
 #### 从应用市场中安装中文语言包即可完成汉化
-
-![](https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/301393110844583.png)
+![](https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/316796466761666.png)
 
 ## 三：推送项目到 sonarqube
 ### 3.1：生成令牌
