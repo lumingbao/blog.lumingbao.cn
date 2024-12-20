@@ -27,9 +27,10 @@ docker run -d --name sonarqube -p 9000:9000 sonarqube
 
 生产环境推荐使用外置数据库
 docker run -d --name sonarqube \
-  -e SONARQUBE_JDBC_URL=jdbc:mysql://<host_ip>:3306/sonar?useUnicode=true\&characterEncoding=utf8\&useSSL=false \
-  -e SONARQUBE_JDBC_USERNAME=sonar \
-  -e SONARQUBE_JDBC_PASSWORD=sonarpassword \
+  --link my-postgres:db \
+  -e SONAR_JDBC_URL=jdbc:postgresql://db:5432/sonar \
+  -e SONAR_JDBC_USERNAME=postgres \
+  -e SONAR_JDBC_PASSWORD=password \
   -p 9000:9000 \
   sonarqube
 ````
