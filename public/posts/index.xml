@@ -3,7 +3,14 @@
         <title>所有文章 - 芦明宝的博客 | 见自己、见天地、见众生</title>
         <link>https://blog.lumingba.cn/posts/</link>
         <description>所有文章 | 芦明宝的博客 | 见自己、见天地、见众生</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Dec 2024 08:50:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Dec 2024 11:30:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>MacOS安装jenv实现多JDK版本管理和自由切换</title>
+    <link>https://blog.lumingba.cn/archives/mhv016ey/</link>
+    <pubDate>Fri, 20 Dec 2024 11:30:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/mhv016ey/</guid>
+    <description><![CDATA[MacOS安装jenv实现多JDK版本管理和自由切换 在MacOS上安装 jenv 来实现多JDK版本的管理和自由切换，可以按照以下步骤进行。jenv 是]]></description>
+</item><item>
     <title>搭建 sonarqube 代码质量工具</title>
     <link>https://blog.lumingba.cn/archives/4y70teum/</link>
     <pubDate>Fri, 20 Dec 2024 08:50:00 &#43;0000</pubDate>
@@ -66,12 +73,5 @@
     <author>芦明宝</author>
     <guid>https://blog.lumingba.cn/archives/35543/</guid>
     <description><![CDATA[MacOS下制作种子图片、将种子隐藏至图片内 开始动手~ 准备： 环境: Mac os 10.13.5 、工具:iTerm2 、 命令:zip和unzip 第一步 压缩t.mp4文]]></description>
-</item><item>
-    <title>根据银行卡号查询银行卡信息API</title>
-    <link>https://blog.lumingba.cn/archives/97661/</link>
-    <pubDate>Thu, 16 Dec 2021 22:00:00 &#43;0000</pubDate>
-    <author>芦明宝</author>
-    <guid>https://blog.lumingba.cn/archives/97661/</guid>
-    <description><![CDATA[根据银行卡号查询开户行API 该接口由支付宝提供，完全免费 使用该接口可以校验银行卡号并返回银行卡号所属银行等信息 String cardNo = &ldquo;xxxxx&rdquo;; https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=cardNo&cardBinCheck=true { &#34;cardType&#34;: &#34;DC&#34;, &#34;bank&#34;: &#34;QDCCB&#34;, // 青岛银行]]></description>
 </item></channel>
 </rss>

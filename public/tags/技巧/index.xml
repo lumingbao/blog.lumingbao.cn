@@ -3,7 +3,14 @@
         <title>技巧 - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</title>
         <link>https://blog.lumingba.cn/tags/%E6%8A%80%E5%B7%A7/</link>
         <description>技巧 - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Dec 2024 08:50:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/tags/%E6%8A%80%E5%B7%A7/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Dec 2024 11:30:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/tags/%E6%8A%80%E5%B7%A7/" rel="self" type="application/rss+xml" /><item>
+    <title>MacOS安装jenv实现多JDK版本管理和自由切换</title>
+    <link>https://blog.lumingba.cn/archives/mhv016ey/</link>
+    <pubDate>Fri, 20 Dec 2024 11:30:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/mhv016ey/</guid>
+    <description><![CDATA[MacOS安装jenv实现多JDK版本管理和自由切换 在MacOS上安装 jenv 来实现多JDK版本的管理和自由切换，可以按照以下步骤进行。jenv 是]]></description>
+</item><item>
     <title>搭建 sonarqube 代码质量工具</title>
     <link>https://blog.lumingba.cn/archives/4y70teum/</link>
     <pubDate>Fri, 20 Dec 2024 08:50:00 &#43;0000</pubDate>
