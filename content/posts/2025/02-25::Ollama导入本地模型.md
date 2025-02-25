@@ -1,15 +1,16 @@
 +++
-title = "搭建 sonarqube 代码质量工具"
-date = 2024-12-20 08:50:00
-url = "archives/4y70teum"
+title = ":Ollama导入本地模型"
+date = 2025-02-25 18:00:00
+url = "archives/0yfr7ixs"
 tags = ["技巧"]
 categories = ["日常记录"]
-featuredimagepreview = 'https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/297928175369583.png'
+featuredimagepreview = 'https://oss.lumingbao.cn/images/20250225/5728ee723c2748b5a111156f9921a859.png'
 +++
 
 # Ollama 导入本地模型
 
-![](https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/297928175369583.png)
+![](https://oss.lumingbao.cn/images/20250225/5728ee723c2748b5a111156f9921a859.png?imageView2/0/interlace/1/q/50|imageslim)
+
 
 #### 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://huggingface.co) 来下载模型进行导入，下面将讲解详细的过程
 

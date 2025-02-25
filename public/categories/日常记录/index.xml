@@ -3,7 +3,14 @@
         <title>日常记录 - 分类 - 芦明宝的博客 | 见自己、见天地、见众生</title>
         <link>https://blog.lumingba.cn/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</link>
         <description>日常记录 - 分类 - 芦明宝的博客 | 见自己、见天地、见众生</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Dec 2024 11:30:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 25 Feb 2025 18:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+    <title>:Ollama导入本地模型</title>
+    <link>https://blog.lumingba.cn/archives/0yfr7ixs/</link>
+    <pubDate>Tue, 25 Feb 2025 18:00:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/0yfr7ixs/</guid>
+    <description><![CDATA[Ollama 导入本地模型 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://huggingface.co) 来下载模型进行导入，下面将讲解详细的过程 一：Ollama下载安装 1.1：]]></description>
+</item><item>
     <title>MacOS安装jenv实现多JDK版本管理和自由切换</title>
     <link>https://blog.lumingba.cn/archives/mhv016ey/</link>
     <pubDate>Fri, 20 Dec 2024 11:30:00 &#43;0000</pubDate>
@@ -17,13 +24,6 @@
     <author>芦明宝</author>
     <guid>https://blog.lumingba.cn/archives/4y70teum/</guid>
     <description><![CDATA[搭建 sonarqube 代码质量工具 SonarQube是管理代码质量一个开放平台，可以快速的定位代码中潜在的或者明显的错误，下面将会介绍一下这个工具的安装、配]]></description>
-</item><item>
-    <title>搭建 sonarqube 代码质量工具</title>
-    <link>https://blog.lumingba.cn/archives/4y70teum/</link>
-    <pubDate>Fri, 20 Dec 2024 08:50:00 &#43;0000</pubDate>
-    <author>芦明宝</author>
-    <guid>https://blog.lumingba.cn/archives/4y70teum/</guid>
-    <description><![CDATA[Ollama 导入本地模型 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://huggingface.co) 来下载模型进行导入，下面将讲解详细的过程 一：Ollama下载安装 1.1：]]></description>
 </item><item>
     <title>zoc license code</title>
     <link>https://blog.lumingba.cn/archives/zblbvrl6/</link>
