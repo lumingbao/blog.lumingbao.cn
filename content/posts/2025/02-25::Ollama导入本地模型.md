@@ -1,5 +1,5 @@
 +++
-title = ":Ollama导入本地模型"
+title = "Ollama导入本地模型"
 date = 2025-02-25 18:00:00
 url = "archives/0yfr7ixs"
 tags = ["技巧"]
