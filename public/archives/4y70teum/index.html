@@ -6,18 +6,18 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>搭建 sonarqube 代码质量工具 - 芦明宝的博客 | 见自己、见天地、见众生</title><meta name="Description" content="见自己、见天地、见众生"><meta property="og:title" content="搭建 sonarqube 代码质量工具" />
-<meta property="og:description" content="搭建 sonarqube 代码质量工具 SonarQube是管理代码质量一个开放平台，可以快速的定位代码中潜在的或者明显的错误，下面将会介绍一下这个工具的安装、配" />
+<meta property="og:description" content="Ollama 导入本地模型 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://huggingface.co) 来下载模型进行导入，下面将讲解详细的过程 一：Ollama下载安装 1.1：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.lumingba.cn/archives/4y70teum/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-12-20T08:50:00+00:00" />
 <meta property="article:modified_time" content="2024-12-20T08:50:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="搭建 sonarqube 代码质量工具"/>
-<meta name="twitter:description" content="搭建 sonarqube 代码质量工具 SonarQube是管理代码质量一个开放平台，可以快速的定位代码中潜在的或者明显的错误，下面将会介绍一下这个工具的安装、配"/>
+<meta name="twitter:description" content="Ollama 导入本地模型 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://huggingface.co) 来下载模型进行导入，下面将讲解详细的过程 一：Ollama下载安装 1.1："/>
 <meta name="application-name" content="芦明宝的博客 | 见自己、见天地、见众生">
 <meta name="apple-mobile-web-app-title" content="芦明宝的博客 | 见自己、见天地、见众生"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://blog.lumingba.cn/archives/4y70teum/" /><link rel="prev" href="https://blog.lumingba.cn/archives/zblbvrl6/" /><link rel="next" href="https://blog.lumingba.cn/archives/mhv016ey/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://blog.lumingba.cn/archives/4y70teum/" /><link rel="prev" href="https://blog.lumingba.cn/archives/zblbvrl6/" /><link rel="next" href="https://blog.lumingba.cn/archives/4y70teum/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/blog.lumingba.cn\/archives\/4y70teum\/"
-        },"genre": "posts","keywords": "技巧","wordcount":  369 ,
+        },"genre": "posts","keywords": "技巧","wordcount":  479 ,
         "url": "https:\/\/blog.lumingba.cn\/archives\/4y70teum\/","datePublished": "2024-12-20T08:50:00+00:00","dateModified": "2024-12-20T08:50:00+00:00","publisher": {
             "@type": "Organization",
             "name": "芦明宝"},"author": {
@@ -104,7 +104,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">搭建 sonarqube 代码质量工具</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>芦明宝</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>日常记录</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-12-20">2024-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 369 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-12-20">2024-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 479 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
                 <i class="far fa-eye fa-fw"></i>&nbsp;本文总阅读量<span id="busuanzi_value_page_pv"></span>次&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -119,28 +119,30 @@
         <li></li>
       </ul>
     </li>
-    <li><a href="#一docker-安装sonarqube">一：Docker 安装sonarqube</a>
+    <li><a href="#一ollama下载安装">一：Ollama下载安装</a>
       <ul>
-        <li><a href="#11拉取-sonarqube-镜像">1.1：拉取 SonarQube 镜像</a></li>
-        <li><a href="#12运行-sonarqube-容器">1.2：运行 SonarQube 容器</a></li>
-        <li><a href="#13访问-sonarqube">1.3：访问 SonarQube</a></li>
+        <li><a href="#11下载-ollama-安装包">1.1：下载 Ollama 安装包</a></li>
+        <li><a href="#12验证是否安装成功">1.2：验证是否安装成功</a></li>
       </ul>
     </li>
-    <li><a href="#二sonarqube基本配置">二：sonarqube基本配置</a>
+    <li><a href="#二模型下载导入">二：模型下载导入</a>
       <ul>
-        <li><a href="#21汉化">2.1：汉化</a></li>
+        <li><a href="#21下载">2.1：下载</a></li>
+        <li><a href="#22导入">2.2：导入</a></li>
       </ul>
     </li>
-    <li><a href="#三推送项目到-sonarqube">三：推送项目到 sonarqube</a>
+    <li><a href="#三模型转换">三：模型转换</a>
       <ul>
-        <li><a href="#31生成令牌">3.1：生成令牌</a></li>
-        <li><a href="#32java项目配置">3.2：java项目配置</a></li>
-        <li><a href="#33执行命令">3.3：执行命令</a></li>
+        <li></li>
+        <li><a href="#31所需文件下载">3.1：所需文件下载</a></li>
+        <li><a href="#32安装所有依赖库">3.2：安装所有依赖库</a></li>
+        <li><a href="#33模型转换">3.3：模型转换</a></li>
+        <li><a href="#34导入模型">3.4：导入模型</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="搭建-sonarqube-代码质量工具">搭建 sonarqube 代码质量工具</h1>
+            </div><div class="content" id="content"><h1 id="ollama-导入本地模型">Ollama 导入本地模型</h1>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -149,64 +151,41 @@
         data-sizes="auto"
         alt="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/297928175369583.png"
         title="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/297928175369583.png" style="border-radius:10px 10px 0 0;"/></p>
-<h4 id="sonarqube是管理代码质量一个开放平台可以快速的定位代码中潜在的或者明显的错误下面将会介绍一下这个工具的安装配置以及使用">SonarQube是管理代码质量一个开放平台，可以快速的定位代码中潜在的或者明显的错误，下面将会介绍一下这个工具的安装、配置以及使用。</h4>
-<h2 id="一docker-安装sonarqube">一：Docker 安装sonarqube</h2>
-<h3 id="11拉取-sonarqube-镜像">1.1：拉取 SonarQube 镜像</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker pull sonarqube
-</span></span></code></pre></div><h3 id="12运行-sonarqube-容器">1.2：运行 SonarQube 容器</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker run -d --name sonarqube -p 9000:9000 sonarqube
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">生产环境推荐使用外置数据库
-</span></span><span class="line"><span class="cl">docker run -d --name sonarqube <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --link my-postgres:db <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -e <span class="nv">SONAR_JDBC_URL</span><span class="o">=</span>jdbc:postgresql://db:5432/sonar <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -e <span class="nv">SONAR_JDBC_USERNAME</span><span class="o">=</span>postgres <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -e <span class="nv">SONAR_JDBC_PASSWORD</span><span class="o">=</span>password <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -p 9000:9000 <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  sonarqube
-</span></span></code></pre></div><h3 id="13访问-sonarqube">1.3：访问 SonarQube</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">打开浏览器并访问 http://localhost:9000
-</span></span><span class="line"><span class="cl">默认登录凭据是用户名 admin 和密码 admin
-</span></span></code></pre></div><h2 id="二sonarqube基本配置">二：sonarqube基本配置</h2>
-<h3 id="21汉化">2.1：汉化</h3>
-<h4 id="从应用市场中安装中文语言包即可完成汉化">从应用市场中安装中文语言包即可完成汉化</h4>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/316796466761666.png"
-        data-srcset="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/316796466761666.png, https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/316796466761666.png 1.5x, https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/316796466761666.png 2x"
-        data-sizes="auto"
-        alt="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/316796466761666.png"
-        title="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/316796466761666.png" style="border-radius:10px 10px 0 0;"/></p>
-<h2 id="三推送项目到-sonarqube">三：推送项目到 sonarqube</h2>
-<h3 id="31生成令牌">3.1：生成令牌</h3>
-<h4 id="点击右上角用户头像选择我的账户在安全中生成令牌">点击右上角用户头像，选择我的账户，在安全中生成令牌</h4>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/302325246646541.png"
-        data-srcset="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/302325246646541.png, https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/302325246646541.png 1.5x, https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/302325246646541.png 2x"
-        data-sizes="auto"
-        alt="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/302325246646541.png"
-        title="https://oss.lumingbao.cn/pasteimageintomarkdown/2024-12-20/302325246646541.png" style="border-radius:10px 10px 0 0;"/></p>
-<h3 id="32java项目配置">3.2：java项目配置</h3>
-<h4 id="在pomxml中加入如下代码">在pom.xml中，加入如下代码：</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;build&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;plugins&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;plugin&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/plugin&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;plugin&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;groupId&gt;</span>org.sonarsource.scanner.maven<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;artifactId&gt;</span>sonar-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;version&gt;</span>3.9.1.2184<span class="nt">&lt;/version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/plugin&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/plugins&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;/build&gt;</span>
-</span></span></code></pre></div><h3 id="33执行命令">3.3：执行命令</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mvn sonar:sonar -Dsonar.projectKey<span class="o">=</span>项目标识 -Dsonar.host.url<span class="o">=</span>http://127.0.0.1:9000 -Dsonar.login<span class="o">=</span>上一步生成的令牌
-</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+<h4 id="当-ollama-模型库没有提供你需要的模型时我们可以通过-huggingfacehttpshuggingfaceco-或者-modelscopehttpshuggingfaceco-来下载模型进行导入下面将讲解详细的过程">当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(<a href="https://huggingface.co" target="_blank" rel="noopener noreffer">https://huggingface.co</a>) 或者 modelscope(<a href="https://huggingface.co" target="_blank" rel="noopener noreffer">https://huggingface.co</a>) 来下载模型进行导入，下面将讲解详细的过程</h4>
+<h2 id="一ollama下载安装">一：Ollama下载安装</h2>
+<h3 id="11下载-ollama-安装包">1.1：下载 Ollama 安装包</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">访问 https://ollama.com/download 下载自己系统对应的安装包安装即可
+</span></span></code></pre></div><h3 id="12验证是否安装成功">1.2：验证是否安装成功</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">安装完成，浏览器打开 localhost:11434 页面看到“ollama is running”内容表示安装成功；
+</span></span></code></pre></div><h2 id="二模型下载导入">二：模型下载导入</h2>
+<h3 id="21下载">2.1：下载</h3>
+<h4 id="从-huggingface-或者-modelscope-下载模型并解压到指定目录下如果下载模型直接提供-gguf-格式的模型文件直接导入即可">从 HuggingFace 或者 modelscope 下载模型，并解压到指定目录下，如果下载模型直接提供 GGUF 格式的模型文件，直接导入即可</h4>
+<h3 id="22导入">2.2：导入</h3>
+<h4 id="221创建模型配置文件">2.2.1：创建模型配置文件</h4>
+<p>进入到解压后的模型目录中</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vi Modelfile
+</span></span></code></pre></div><p>加入如下内容：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">FROM ./模型名称.gguf
+</span></span></code></pre></div><h4 id="222模型导入">2.2.2：模型导入</h4>
+<p>执行命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ollama create 自定义模型名称 -f ./Modelfile
+</span></span></code></pre></div><p>导入后执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ollama list
+</span></span></code></pre></div><p>验证是否导入成功</p>
+<h2 id="三模型转换">三：模型转换</h2>
+<h4 id="大部分模型下载后不会直接提供-gguf-格式的模型文件需要将-safetensors-格式的模型文件转换为-gguf-格式">大部分模型下载后，不会直接提供 GGUF 格式的模型文件，需要将 safetensors 格式的模型文件转换为 GGUF 格式</h4>
+<h3 id="31所需文件下载">3.1：所需文件下载</h3>
+<p>下载 从 <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener noreffer">https://github.com/ggml-org/llama.cpp/releases</a> 下载对应自己系统的包，并解压到特定目录
+同时下载 <a href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener noreffer">https://github.com/ggml-org/llama.cpp</a> 源代，并和上面下载的编译好的文件放到同一目录中</p>
+<h3 id="32安装所有依赖库">3.2：安装所有依赖库</h3>
+<p>进入 llama.cpp 目录下，执行命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip install -r requirements.txt
+</span></span></code></pre></div><h3 id="33模型转换">3.3：模型转换</h3>
+<p>执行命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">python convert_hf_to_gguf.py <span class="o">[</span>模型文件夹位置<span class="o">]</span>
+</span></span></code></pre></div><h3 id="34导入模型">3.4：导入模型</h3>
+<p>按照 2.2 步骤导入模型即可</p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -230,7 +209,7 @@
     </div>
 
     <div class="post-nav"><a href="/archives/zblbvrl6/" class="prev" rel="prev" title="zoc license code"><i class="fas fa-angle-left fa-fw"></i>zoc license code</a>
-            <a href="/archives/mhv016ey/" class="next" rel="next" title="MacOS安装jenv实现多JDK版本管理和自由切换">MacOS安装jenv实现多JDK版本管理和自由切换<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/archives/4y70teum/" class="next" rel="next" title="搭建 sonarqube 代码质量工具">搭建 sonarqube 代码质量工具<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments">
     <h2><i class="fas fa-comment-alt"></i> 评论</h2>
@@ -281,7 +260,7 @@
         </script>
     </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license">lumingbao</span><span class="icp-splitter"></span><br class="icp-br"/></br>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license">lumingbao</span><span class="icp-splitter"></span><br class="icp-br"/></br>
                     <span class="icp">陇ICP备2021002622号-1</span></div>
 
             <div>
