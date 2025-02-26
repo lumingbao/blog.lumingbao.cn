@@ -11,7 +11,7 @@
     <pubDate>Tue, 25 Feb 2025 18:00:00 &#43;0000</pubDate>
     <author>芦明宝</author>
     <guid>https://blog.lumingba.cn/archives/0yfr7ixs/</guid>
-    <description><![CDATA[Ollama 导入本地模型 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://huggingface.co) 来下载模型进行导入，下面将讲解详细的过程 一：Ollama下载安装 1.1：]]></description>
+    <description><![CDATA[Ollama 导入本地模型 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://www.modelscope.cn) 来下载模型进行导入，下面将讲解详细的过程 一：Ollama下载安装 1.1：]]></description>
 </item><item>
     <title>MacOS安装jenv实现多JDK版本管理和自由切换</title>
     <link>https://blog.lumingba.cn/archives/mhv016ey/</link>

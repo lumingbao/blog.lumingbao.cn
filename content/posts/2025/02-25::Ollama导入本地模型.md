@@ -12,7 +12,7 @@ featuredimagepreview = 'https://oss.lumingbao.cn/images/20250225/5728ee723c2748b
 ![](https://oss.lumingbao.cn/images/20250225/5728ee723c2748b5a111156f9921a859.png?imageView2/0/interlace/1/q/50|imageslim)
 
 
-#### 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://huggingface.co) 来下载模型进行导入，下面将讲解详细的过程
+#### 当 Ollama 模型库没有提供你需要的模型时，我们可以通过 HuggingFace(https://huggingface.co) 或者 modelscope(https://www.modelscope.cn) 来下载模型进行导入，下面将讲解详细的过程
 
 ## 一：Ollama下载安装
 
