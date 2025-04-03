@@ -4,7 +4,7 @@ date = 2025-04-03 13:00:00
 url = "archives/8ayofa2e"
 tags = ["技巧"]
 categories = ["日常记录"]
-featuredimagepreview = 'https://oss.lumingbao.cn/images/20250225/5728ee723c2748b5a111156f9921a859.png'
+featuredimagepreview = 'https://oss.lumingbao.cn/images/20250403/2726b9e2fc5a4d769ebbcf782c74db86.png'
 +++
 
 # onlyoffice文件大小超出了服务器设置处理
