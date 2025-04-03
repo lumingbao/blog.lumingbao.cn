@@ -3,9 +3,16 @@
         <title>芦明宝的博客 | 见自己、见天地、见众生</title>
         <link>https://blog.lumingba.cn/</link>
         <description>见自己、见天地、见众生</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 25 Feb 2025 18:00:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 03 Apr 2025 13:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://blog.lumingba.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>onlyoffice文件大小超出了服务器设置处理</title>
+    <link>https://blog.lumingba.cn/archives/8ayofa2e/</link>
+    <pubDate>Thu, 03 Apr 2025 13:00:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/8ayofa2e/</guid>
+    <description><![CDATA[onlyoffice文件大小超出了服务器设置处理 【摘要】本文针对使用onlyoffice在线编辑大文件出现的“文件大小超出服务器设置限制”问]]></description>
+</item><item>
     <title>Ollama导入本地模型</title>
     <link>https://blog.lumingba.cn/archives/0yfr7ixs/</link>
     <pubDate>Tue, 25 Feb 2025 18:00:00 &#43;0000</pubDate>
@@ -68,12 +75,5 @@
     <author>芦明宝</author>
     <guid>https://blog.lumingba.cn/archives/a010ac2d/</guid>
     <description><![CDATA[Docker搭建Ngrok内网穿透 一：准备 要有云服务器一台; 公网域名一个，可以是一级域名也可以是二级域名，我这里使用二级域名ngrok.my]]></description>
-</item><item>
-    <title>CAS 5.3服务器搭建</title>
-    <link>https://blog.lumingba.cn/archives/78134/</link>
-    <pubDate>Thu, 17 Mar 2022 14:00:00 &#43;0000</pubDate>
-    <author>芦明宝</author>
-    <guid>https://blog.lumingba.cn/archives/78134/</guid>
-    <description><![CDATA[CAS 5.3服务器搭建 一：CAS5.3 下载 下载地址： GitHub下载地址：https://github.com/apereo/cas-overl]]></description>
 </item></channel>
 </rss>
