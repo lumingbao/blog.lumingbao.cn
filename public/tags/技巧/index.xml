@@ -3,7 +3,14 @@
         <title>技巧 - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</title>
         <link>https://blog.lumingba.cn/tags/%E6%8A%80%E5%B7%A7/</link>
         <description>技巧 - 标签 - 芦明宝的博客 | 见自己、见天地、见众生</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 03 Apr 2025 13:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/tags/%E6%8A%80%E5%B7%A7/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 12 Apr 2025 21:44:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/tags/%E6%8A%80%E5%B7%A7/" rel="self" type="application/rss+xml" /><item>
+    <title>RagFlow数据迁移</title>
+    <link>https://blog.lumingba.cn/archives/f33c0oan/</link>
+    <pubDate>Sat, 12 Apr 2025 21:44:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/f33c0oan/</guid>
+    <description><![CDATA[RagFlow数据迁移 【背景】在实际开发过程,项目环境有开发环境,测试环境,生产环境;如何将开发环境中的RAGFlow迁移到测试环境,甚至上]]></description>
+</item><item>
     <title>onlyoffice文件大小超出了服务器设置处理</title>
     <link>https://blog.lumingba.cn/archives/8ayofa2e/</link>
     <pubDate>Thu, 03 Apr 2025 13:00:00 &#43;0000</pubDate>
@@ -66,12 +73,5 @@
     <author>芦明宝</author>
     <guid>https://blog.lumingba.cn/archives/6a1dd085/</guid>
     <description><![CDATA[CAP 理论与 BASE 理论 什么是CAP理论 1998年，加州大学的计算机科学家 Eric Brewer 提出，分布式系统有三个指标。 Consistency（一致性） Availa]]></description>
-</item><item>
-    <title>04-20::Docker搭建Ngrok内网穿透</title>
-    <link>https://blog.lumingba.cn/archives/a010ac2d/</link>
-    <pubDate>Wed, 20 Apr 2022 17:00:00 &#43;0000</pubDate>
-    <author>芦明宝</author>
-    <guid>https://blog.lumingba.cn/archives/a010ac2d/</guid>
-    <description><![CDATA[Docker搭建Ngrok内网穿透 一：准备 要有云服务器一台; 公网域名一个，可以是一级域名也可以是二级域名，我这里使用二级域名ngrok.my]]></description>
 </item></channel>
 </rss>
