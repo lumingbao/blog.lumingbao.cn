@@ -3,7 +3,14 @@
         <title>所有文章 - 芦明宝的博客 | 见自己、见天地、见众生</title>
         <link>https://blog.lumingba.cn/posts/</link>
         <description>所有文章 | 芦明宝的博客 | 见自己、见天地、见众生</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 12 Apr 2025 21:44:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 May 2025 14:40:00 &#43;0000</lastBuildDate><atom:link href="https://blog.lumingba.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>一张图带你看懂JAVA中的VO、DTO、BO、PO、DAO</title>
+    <link>https://blog.lumingba.cn/archives/UmzHt5sf/</link>
+    <pubDate>Thu, 22 May 2025 14:40:00 &#43;0000</pubDate>
+    <author>芦明宝</author>
+    <guid>https://blog.lumingba.cn/archives/UmzHt5sf/</guid>
+    <description><![CDATA[一张图带你看懂JAVA中的VO、DTO、BO、PO、DAO]]></description>
+</item><item>
     <title>RagFlow数据迁移</title>
     <link>https://blog.lumingba.cn/archives/f33c0oan/</link>
     <pubDate>Sat, 12 Apr 2025 21:44:00 &#43;0000</pubDate>
@@ -66,12 +73,5 @@
     <author>芦明宝</author>
     <guid>https://blog.lumingba.cn/archives/mv2jaib0/</guid>
     <description><![CDATA[Docker部署Zabbix 一：安装 Zabbix 服务 创建docker网络 docker network create -d bridge zabbix_net 创建zabbix服务，注意数据库配置改为自己的数据库信息，启动时会]]></description>
-</item><item>
-    <title>04-27::CAP 理论与 BASE 理论</title>
-    <link>https://blog.lumingba.cn/archives/6a1dd085/</link>
-    <pubDate>Wed, 27 Apr 2022 15:58:00 &#43;0000</pubDate>
-    <author>芦明宝</author>
-    <guid>https://blog.lumingba.cn/archives/6a1dd085/</guid>
-    <description><![CDATA[CAP 理论与 BASE 理论 什么是CAP理论 1998年，加州大学的计算机科学家 Eric Brewer 提出，分布式系统有三个指标。 Consistency（一致性） Availa]]></description>
 </item></channel>
 </rss>
